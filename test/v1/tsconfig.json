@@ -1,0 +1,14 @@
+{
+  "include": ["./src/*"],
+  "compilerOptions": {
+    "strict": true,
+    "target": "es6",
+    "module": "ESNext",
+    "moduleResolution": "node", // 指定模块解析的方式
+    "resolveJsonModule": true
+    // "baseUrl": ".",
+    // "paths": {
+    //   "/@/*": ["src/*"]
+    // }
+  }
+}
