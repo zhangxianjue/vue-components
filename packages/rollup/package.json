@@ -1,8 +1,9 @@
 {
-  "name": "zhangxianjue-vue-component",
+  "name": "zhangxianjue-vue-components",
   "version": "1.0.0",
   "description": "",
   "main": "./dist/zhangxianjue-vue-component.umd.js",
+  "module": "./dist/zhangxianjue-vue-component.esm.js",
   "scripts": {
     "build": "npm run clean & npm run build:esm & npm run build:umd",
     "build:esm": "rollup --config build/rollup.esm.mjs",
@@ -18,11 +19,6 @@
     "rimraf": "^5.0.5",
     "rollup-plugin-css-only": "^4.5.2",
     "rollup-plugin-vue": "^6.0.0"
-  },
-  "dependencies": {
-    "rollup-plugin-typescript2": "^0.36.0",
-    "tslib": "^2.6.2",
-    "typescript": "^5.3.3"
   },
   "peerDependencies": {
     "vue": "^3.4.3"

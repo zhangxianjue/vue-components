@@ -1,11 +1,11 @@
 <template>
-  <h3>测试</h3>
+  <h3>测试 HelloWorld!</h3>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 export default defineComponent({
-  name: "App",
+  name: "HelloWorld",
 });
 </script>
 

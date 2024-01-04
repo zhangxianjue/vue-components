@@ -1,4 +1,5 @@
 <template>
   <div>app !</div>
-  <my-button>button</my-button>
+  <HelloWorld></HelloWorld>
+  <Alert></Alert>
 </template>

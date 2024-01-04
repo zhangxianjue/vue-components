@@ -76,13 +76,11 @@ webpack 和 rollup 都是 JavaScript 的 Bundler 打包工具，但是，应用�
 - webpack 适合构建 Web 应用。
 - Rollup 适合构建结构扁平、性能出众的 JS 类库。
 
-### 打包什么类型的文件，供别人使用？
-
-- esm`推荐`，适用支持 ES Module 规范的环境
-- umd`备用`，一种 JS 通用格式，支持多种环境，就是文件比较大。
-- cjs，适用支持 CommonJS 规范的环境，如 Node.js
-
-- VueJS 的插件系统是怎么样的？
+- 打包什么类型的文件，供别人使用？
+  - esm`推荐`，适用支持 ES Module 规范的环境
+  - umd`备用`，一种 JS 通用格式，支持多种环境，就是文件比较大。
+  - cjs，适用支持 CommonJS 规范的环境，如 Node.js
+- VueJS 插件是什么？—— Vue 插件 (Plugins) 是为了给 Vue 框架添加额外功能的，本质上就是一个拥有 install() 方法的对象，也可以直接是一个安装函数本身。
 - VueJS 组件库如何实现按需加载和全局加载这两种方式？
 - 如何使用 Rollup 构建 VueJS 组件库？
   - [rollup 快速上手](https://rollupjs.org/tutorial/)
@@ -93,3 +91,6 @@ webpack 和 rollup 都是 JavaScript 的 Bundler 打包工具，但是，应用�
   - 如何支持 `typescript`？—— `rollup-plugin-typescript2 typescript tslib`
   - 安装 `npm i -D rimraf`，并配置新指令 `clean`,手动删除 dist 文件
   - 生成 `esm` & `umd` 两种格式的模块文件
+  - 如何在本地测试我们的组件库？
+    - 在 zhangxianjue-vue-component 项目中，执行`npm link`创建项目软连接。然后在 package.json 文件中，设置指定默认入口文件`{ "main": "./dist/zhangxianjue-vue-component.umd.js" }`，以及 ES Module 入口文件`{"module": "./dist/zhangxianjue-vue-component.esm.js"}`。为什么要指定 `ES Module` 呢？ES6 支持 Tree Shakeing 机制，如果入口文件是 CommonJS 格式，那么 Tree Shaking 机制将无法生效。然后，我们提供两种入口方式以供选择。
+    - 在 examples 项目中，执行`npm link zhangxianjue-vue-component`，创建组件库软连接。

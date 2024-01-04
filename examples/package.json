@@ -7,8 +7,5 @@
     "dev": "vite"
   },
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "zhangxianjue-vue-components": "workspace:^"
-  }
+  "license": "ISC"
 }
