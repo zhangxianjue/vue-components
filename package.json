@@ -4,14 +4,17 @@
   "description": "这是一个 VueJS 的组件库",
   "main": "index.js",
   "scripts": {
-    "examples": "pnpm -F examples dev",
-    "build": "pnpm -F components build"
+    "dev:docs": "pnpm -F docs dev",
+    "build:component": "pnpm -F zhangxianjue-vue-components build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "vue": "^3.4.3"
+    "@element-plus/icons-vue": "^2.3.1",
+    "element-plus": "^2.4.4",
+    "vue": "^3.4.3",
+    "vue-router": "^4.2.5"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.2",

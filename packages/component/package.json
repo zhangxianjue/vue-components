@@ -1,0 +1,29 @@
+{
+  "name": "zhangxianjue-vue-components",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/zhangxianjue-vue-components.umd.js",
+  "module": "./dist/zhangxianjue-vue-components.esm.js",
+  "scripts": {
+    "build": "npm run clean & npm run build:esm & npm run build:umd",
+    "build:esm": "rollup --config build/rollup.esm.mjs",
+    "build:umd": "rollup --config build/rollup.umd.mjs",
+    "clean": "rimraf ./dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "rimraf": "^5.0.5",
+    "rollup-plugin-css-only": "^4.5.2",
+    "rollup-plugin-vue": "^6.0.0"
+  },
+  "peerDependencies": {
+    "vue": "^3.4.3",
+    "@element-plus/icons-vue": "^2.3.1",
+    "element-plus": "^2.4.4",
+    "vue-router": "^4.2.5"
+  }
+}
