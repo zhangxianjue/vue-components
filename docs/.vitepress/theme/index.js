@@ -10,7 +10,6 @@ import "zhangxianjue-vue-components/dist/bundle.css";
 export default {
   ...DefaultTheme,
   enhanceApp({ app }) {
-    // app.component("ElButton", ElButton);
     app.use(elementPlus);
     app.use(zhangxianjueVueComponents);
   },
