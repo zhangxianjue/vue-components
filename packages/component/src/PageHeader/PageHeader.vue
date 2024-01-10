@@ -10,7 +10,7 @@
   </el-affix>
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent } from "vue";
 import { ElPageHeader, ElAffix } from "element-plus";
 export default defineComponent({

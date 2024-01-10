@@ -22,9 +22,16 @@ import "element-plus/dist/index.css";
 import zhangxianjueVueComponents from "zhangxianjue-vue-components";
 import "zhangxianjue-vue-components/dist/bundle.css";
 
+// 引用图标
+import * as ElementPlusIconsVue from "@element-plus/icons-vue";
+
 const app = createApp(App);
 app.use(elementPlus);
 app.use(zhangxianjueVueComponents); // 注册 zhangxianjue-vue-components
+for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
+  app.component(key, component);
+}
+
 app.mount("#app");
 ```
 
@@ -34,5 +41,3 @@ app.mount("#app");
   <PageHeader content="这是一个 Vue3 的组件库" />
 </template>
 ```
-
-<!--  -->

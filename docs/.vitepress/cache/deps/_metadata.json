@@ -2,45 +2,54 @@
   "hash": "b95fad09",
   "configHash": "09dd1bf3",
   "lockfileHash": "80616cec",
-  "browserHash": "f2ee97c1",
+  "browserHash": "a64f6781",
   "optimized": {
     "vue": {
       "src": "../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "dc18ea23",
+      "fileHash": "b5bd2699",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/.pnpm/@vue+devtools-api@6.5.1/node_modules/@vue/devtools-api/lib/esm/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "df578f99",
+      "fileHash": "a8e779d8",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../node_modules/.pnpm/@vueuse+core@10.7.1_vue@3.4.4/node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "9e2950cb",
+      "fileHash": "f8be78b4",
       "needsInterop": false
     },
     "element-plus": {
       "src": "../../../../node_modules/.pnpm/element-plus@2.4.4_vue@3.4.4/node_modules/element-plus/es/index.mjs",
       "file": "element-plus.js",
-      "fileHash": "f8fc0913",
+      "fileHash": "b304954c",
       "needsInterop": false
     },
     "vue-router": {
       "src": "../../../../node_modules/.pnpm/vue-router@4.2.5_vue@3.4.4/node_modules/vue-router/dist/vue-router.mjs",
       "file": "vue-router.js",
-      "fileHash": "e759f50d",
+      "fileHash": "a4bbb3d1",
+      "needsInterop": false
+    },
+    "@element-plus/icons-vue": {
+      "src": "../../../../node_modules/.pnpm/@element-plus+icons-vue@2.3.1_vue@3.4.4/node_modules/@element-plus/icons-vue/dist/index.js",
+      "file": "@element-plus_icons-vue.js",
+      "fileHash": "731325cc",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-4DMJ7UXQ": {
-      "file": "chunk-4DMJ7UXQ.js"
+    "chunk-ZCDSO7PP": {
+      "file": "chunk-ZCDSO7PP.js"
     },
     "chunk-SQ572LZ6": {
       "file": "chunk-SQ572LZ6.js"
+    },
+    "chunk-4DMJ7UXQ": {
+      "file": "chunk-4DMJ7UXQ.js"
     },
     "chunk-QROZ5UDF": {
       "file": "chunk-QROZ5UDF.js"

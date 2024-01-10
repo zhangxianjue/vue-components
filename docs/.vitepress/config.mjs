@@ -7,16 +7,18 @@ export default defineConfig({
     nav: [{ text: "首页", link: "/" }],
     sidebar: {
       "/": {
-        text: "简介",
-        link: "/",
         items: [
+          { text: "简介 && 安装", link: "/" },
           {
-            text: "通用组件",
+            text: "基础组件",
             items: [{ text: "ComponentExample 组件示例", link: "/component/component-example.md" }],
           },
           {
             text: "VitePress 组件",
-            items: [{ text: "PageHeader 头部导航", link: "/component/page-header.md" }],
+            items: [
+              { text: "PageHeader 头部导航", link: "/component/page-header.md" },
+              { text: "BilibiliTutorial 小破站视频", link: "/component/bilibili-tutorial.md" },
+            ],
           },
         ],
       },
