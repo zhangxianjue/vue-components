@@ -9,5 +9,5 @@ export const file = (t) => `dist/${name}.${t}.js`;
 export default {
   input: "main.js",
   plugins: [nodeResolve(), vue(), css({ output: "bundle.css" })],
-  external: ["vue", "vue-router", "element-plus", "@element-plus/icons-vue"],
+  external: ["vue", "element-plus", "@element-plus/icons-vue"],
 };

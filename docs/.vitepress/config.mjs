@@ -18,6 +18,7 @@ export default defineConfig({
             items: [
               { text: "PageHeader 头部导航", link: "/component/page-header.md" },
               { text: "BilibiliTutorial 小破站视频", link: "/component/bilibili-tutorial.md" },
+              { text: "Roadmap 路线图", link: "/component/roadmap.md" },
             ],
           },
         ],

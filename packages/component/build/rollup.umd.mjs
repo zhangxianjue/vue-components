@@ -9,7 +9,7 @@ export default {
     format: "umd",
     globals: {
       vue: "Vue",
-      "vue-router": "VueRouter",
+      // "vue-router": "VueRouter",
       "element-plus": "elementPlus",
     },
     exports: "named",
