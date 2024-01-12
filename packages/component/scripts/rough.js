@@ -49,18 +49,18 @@ export default class GeneratorGraph {
 
     // 文字内容自适应矩形宽度
     w = this.adaptiveWidth(text);
-    x = x + w / 2;
-    y = y + h / 2;
-    roughCanvas.ellipse(x, y, w, h, {
+    const centerX = x + w / 2;
+    const centerY = y + h / 2;
+    roughCanvas.ellipse(centerX, centerY, w, h, {
       fill: "#ff9587",
       fillStyle: "solid",
       roughness: 2,
     });
-    ctx.fillText(text, x - w / 2 + textPadding / 2, y + h / 8);
+    ctx.fillText(text, x + textPadding / 2, y + h / 2 + 5);
 
     return {
-      centerX: x, // 返回矩形中心点
-      centerY: y,
+      centerX, // 返回矩形中心点
+      centerY,
       x,
       y,
       width: w,

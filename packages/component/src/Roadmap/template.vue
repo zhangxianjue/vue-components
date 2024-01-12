@@ -1,5 +1,6 @@
 <template>
-  <canvas id="roadmapCanvas" :height="canvasHeight"></canvas>
+  <h3 style="text-align: center; margin: 0" v-if="title">{{ title }}</h3>
+  <canvas id="roadmapCanvas" :height="height"></canvas>
 </template>
 
 <script>
@@ -10,7 +11,8 @@ const canvasWidth = 960;
 const drawMap = (canvas, datas = []) => {
   const graph = new GeneratorGraph(canvas);
   let lastN, currentN;
-  const nodeOffset = 50;
+  let nodeOffsetX = 80; // 节点之间 X 轴上的间隔
+  let nodeOffsetY = 50; // 节点之间 Y 轴上的间隔
   let direction = 1;
   let autoRectangleNumber = 0; // 计数器，用于生成矩形节点编号
   datas.forEach((item, index, array) => {
@@ -28,22 +30,26 @@ const drawMap = (canvas, datas = []) => {
       lastItem.height = lastN.height;
 
       // 获取当前节点信息
-      item.x = lastN.x + (lastN.width + nodeOffset) * direction;
+
       item.y = lastN.y;
       item.height = lastN.height;
 
-      let itemW = graph.adaptiveWidth(item.text);
+      let itemW = graph.adaptiveWidth(item.text) > graph.w ? graph.adaptiveWidth(item.text) : graph.w;
+      item.x = lastN.x + (itemW + nodeOffsetX + lastN.width - itemW) * direction;
+
       if (direction === 1) {
+        item.x = lastN.x + (nodeOffsetX + lastN.width) * direction;
         if (itemW + item.x > canvasWidth) {
           direction = -1;
           item.x = canvasWidth - itemW - 10;
-          item.y = item.y + item.height + nodeOffset;
+          item.y = item.y + item.height + nodeOffsetY;
         }
       } else {
-        if (lastItem.x - itemW - nodeOffset < 0) {
+        item.x = lastN.x + (itemW + nodeOffsetX) * direction;
+        if (lastItem.x - itemW - nodeOffsetX < 0) {
           direction = 1;
           item.x = 10;
-          item.y = item.y + item.height + nodeOffset;
+          item.y = item.y + item.height + nodeOffsetY;
         }
       }
 
@@ -75,16 +81,19 @@ export default defineComponent({
   name: "Roadmap",
   props: {
     currentRouter: Object,
+    title: {
+      type: String,
+      default: "",
+    },
     data: {
       type: Array,
       default: [],
     },
-    canvasHeight: {
+    height: {
       default: 500,
     },
   },
   mounted: function () {
-    console.log(this.currentRouter);
     const canvas = document.getElementById("roadmapCanvas");
 
     // 设置画布尺寸
